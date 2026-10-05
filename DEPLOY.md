@@ -1,5 +1,19 @@
 # 部署到 idncode.com（GitHub + Cloudflare Pages）
 
+> ⛔️ **本文件已弃用，仅作留档。**
+>
+> 原计划用 Cloudflare Pages 接本仓库自动部署，后来发现：
+> 1. `idncode.com` 已由 `btcsam/idn-code` 仓库 `site/` 目录下的 Worker 声明为自定义域名，
+>    两边同时绑定会冲突；
+> 2. 正式站采用 Cloudflare Workers 静态资源部署，命令是 `npx wrangler deploy`。
+>
+> **上线请以 `btcsam/idn-code/site/README` 与 `wrangler.jsonc` 的说明为准**，
+> 且发布前需要会长确认。下面的步骤不要执行。
+
+---
+
+## 原始步骤（留档，勿执行）
+
 代码仓库：<https://github.com/btcsam/idncode-website>
 托管：Cloudflare Pages（Git 自动部署）→ 自定义域名 `idncode.com` 与 `www.idncode.com`
 

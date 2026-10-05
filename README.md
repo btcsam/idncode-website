@@ -1,11 +1,29 @@
-# IDN Code 官网（静态站）
+# IDN Code 官网设计与文案 · 学习参考（Make by IDN Code）
+
+> ⚠️ **本仓库仅作学习参考，不是上线版本，请勿部署到 `idncode.com`。**
+>
+> 正式官网位于 **`btcsam/idn-code`** 仓库的 `site/` 目录（Cloudflare Workers 静态资源，
+> 域名绑定写在该目录的 `wrangler.jsonc` 里）。本仓库是早期独立做的一版设计探索，
+> 其中值得复用的部分（中英双语内容、下载区读版本清单的逻辑）已经并入正式站。
+>
+> 保留这个仓库的原因是：版式与文案组织的思路可以作为参考，但**不要再在这里改内容**，
+> 否则两边会不一致。
 
 结构与逻辑参考 idnclaw.com：同一套版式语言（深色 Hero + 白底卡片 + 滚动显现 + 三步上传 + 对比表 + 下载区），
 主色由红粉改为 IDN Code 的品牌蓝体系（取自 App 图标的青蓝渐变）。
 
-- 代码仓库：<https://github.com/btcsam/idncode-website>
-- 线上地址：<https://idncode.com>（Cloudflare Pages 托管，跟着 `main` 自动发布）
-- 部署步骤见 [DEPLOY.md](./DEPLOY.md)
+- 本仓库（参考版）：<https://github.com/btcsam/idncode-website>
+- 正式站源码：`btcsam/idn-code` → `site/`
+- 原计划的 Cloudflare Pages 部署流程见 [DEPLOY.md](./DEPLOY.md)（**已弃用**，仅作留档）
+
+## 与正式站的差异（供对照）
+
+| | 本仓库（参考） | 正式站 |
+| --- | --- | --- |
+| 语言实现 | `/en/` 独立英文页 + 语言切换链接 | `data-i18n` 逐节点替换 + localStorage 记忆 |
+| 设计系统 | 自带 `css/site.css`，引用 Google Fonts | 复用 `styles.css` 的 CSS 变量，系统字体栈，不引外部资源 |
+| 叙事 | "让 AI 真正上手工程"（代码为主） | "小思思有了自己的工作台"（文件与任务为主，代码是其中一个场景） |
+| 安全头 | `site/_headers`（无 CSP） | 含 CSP 的完整安全头 |
 
 ## 目录结构
 
