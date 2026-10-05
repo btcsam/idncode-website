@@ -1,0 +1,14 @@
+{
+  "release": {
+    "appVersion": "",
+    "title": "IDN Code 桌面端",
+    "status": "unavailable",
+    "isCurrent": true,
+    "releaseNotes": "IDN Code 桌面端安装包尚未开放公开下载。开放后本页会显示版本号、安装包大小与 SHA-256 校验值。",
+    "downloads": [
+      { "platform": "mac", "arch": "arm64", "label": "Mac Apple Silicon", "available": false },
+      { "platform": "mac", "arch": "x64", "label": "Mac Intel", "available": false },
+      { "platform": "windows", "arch": "x64", "label": "Windows x64", "available": false }
+    ]
+  }
+}
