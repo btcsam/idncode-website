@@ -3,22 +3,32 @@
 结构与逻辑参考 idnclaw.com：同一套版式语言（深色 Hero + 白底卡片 + 滚动显现 + 三步上传 + 对比表 + 下载区），
 主色由红粉改为 IDN Code 的品牌蓝体系（取自 App 图标的青蓝渐变）。
 
+- 代码仓库：<https://github.com/btcsam/idncode-website>
+- 线上地址：<https://idncode.com>（Cloudflare Pages 托管，跟着 `main` 自动发布）
+- 部署步骤见 [DEPLOY.md](./DEPLOY.md)
+
 ## 目录结构
 
 ```
-website/site/
-├── index.html            中文首页
-├── privacy.html          中文隐私政策
-├── terms.html            中文服务条款
-├── en/
-│   ├── index.html        英文首页
-│   ├── privacy.html      英文隐私政策
-│   └── terms.html        英文服务条款
-├── css/site.css          全站样式（含品牌色变量、响应式、动效）
-├── js/site.js            交互：滚动显现、粒子、下载清单、订阅表单
-├── js/strings.js         动态文案（下载状态、表单提示等，中英各一份）
-├── data/releases.json    版本清单（下载按钮的唯一数据来源）
-└── assets/               Logo 与吉祥物素材
+website/                  ← 仓库根目录
+├── README.md             本文件：改文案、换素材看这里
+├── DEPLOY.md             部署与域名绑定步骤
+└── site/                 ← Cloudflare Pages 的输出目录
+    ├── index.html            中文首页
+    ├── privacy.html          中文隐私政策
+    ├── terms.html            中文服务条款
+    ├── en/
+    │   ├── index.html        英文首页
+    │   ├── privacy.html      英文隐私政策
+    │   └── terms.html        英文服务条款
+    ├── css/site.css          全站样式（含品牌色变量、响应式、动效）
+    ├── js/site.js            交互：滚动显现、粒子、下载清单、订阅表单
+    ├── js/strings.js         动态文案（下载状态、表单提示等，中英各一份）
+    ├── data/releases.json    版本清单（下载按钮的唯一数据来源）
+    ├── assets/               Logo 与吉祥物素材
+    ├── _headers             Pages 安全响应头与缓存策略
+    ├── robots.txt
+    └── sitemap.xml
 ```
 
 ## 本地预览
